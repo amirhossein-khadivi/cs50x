@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    homepage
+{% endblock %}
+
+{% block main %}
+    <div class='table-responsive-md'>
+        <table class='table mx-auto w-50'>
+            <thead>
+                <tr class='table-active'>
+                    <th scope='col'>
+                        company name
+                    </th>
+                    <th scope='col'>
+                        symbol
+                    </th>
+                    <th scope='col'>
+                        number of shares
+                    </th>
+                    <th scope='col'>
+                        Buy
+                    </th>
+                    <th scope='col'>
+                        current
+                    </th>
+                    <th scope='col'>
+                        srock
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in portfolio %}
+                <tr class='table-light'>
+                    <td>
+                        {{stock['name']}}
+                    </td>
+                    <td>
+                        {{stock['symbol']}}
+                    </td>
+                    <td>
+                        {{stock['shares']}}
+                    </td>
+                    <td>
+                        {{stock['paid_price'] | usd}}
+                    </td>
+                    <td>
+                        {{stock['paid_price'] | usd}}
+                    </td>
+                    <td>
+                        {{stock['stock_value'] | usd}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class='border-0 fw-bold text-end'>
+                        cash_left
+                    </td>
+                    <td class='border-0 text-center'>
+                        {{cash_left | usd}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class='border-0 fw-bold text-end'>
+                        total
+                    </td>
+                    <td class='border-0 text-center'>
+                        {{total_amount | usd}}
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}

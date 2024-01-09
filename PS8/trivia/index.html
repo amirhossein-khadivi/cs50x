@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function corchecker(correct, element) {
+                if (correct) {
+                    document.getElementById(element).innerHTML = 'Correct';
+                }
+                else {
+                    document.getElementById(element).innerHTML = 'Incorrect';
+                }
+            }
+            function resetbtn() {
+                var btns = document.querySelectorAll('.button');
+                btns.forEach(function (btn) {
+                    btn.classList.remove('incorrect');
+                    btn.classList.remove('correct');
+                });
+            }
+            function answerget() {
+                resetbtn();
+                if(event.target.id == 'correct') {
+                    event.target.classList.add('correct');
+                    corchecker(true, 'm');
+                }
+                else {
+                    event.target.classList.add('incorrect');
+                    corchecker(false, 'm');
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function (event) {
+                var btns = document.querySelectorAll('.button');
+                btns.forEach(function (btn) {
+                    btn.addEventListener('click', answerget);
+                });
+                inputfield = document.querySelector('input');
+                checkbutton = document.querySelector('#check');
+                checkbutton.addEventListener('click', function (evt) {
+                    if (inputfield.value.toLowerCase() == ('maryam mirzakhani' || 'maryammirzakhani'
+                             || 'mariam mirzakhani' || 'mariammirzakhani' || 'maryam mirzakani' ||
+                             'maryammirzakani' || 'maryam mirzakhany' || 'mariam mirzakhany' || 'mariammirzakhany')) {
+                        corchecker(true, 'f');
+                    }
+                    else {
+                        corchecker(false, 'f')
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which lady mathematician is known as the queen of mathematics?</h3>
+                <h4 id='m'></h4>
+                <button class='button'>Sophie Germain</button>
+                <button id='correct' class='button'>Maryam Mirzakhani</button>
+                <button class='button'>Florence Nightingale</button>
+                <button class='button'>Alex Halderman</button>
+                <button class='button'>Emmy Amalie Noether</button>
+                <button class='button'>Hypatia of Alexandria</button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h4 id='f'>Which lady mathematician has won the Fields Prize?</h4>
+                <input type='text'>
+                <button id='check' class='input'>Submit!</button>
+            </div>
+        </div>
+    </body>
+</html>

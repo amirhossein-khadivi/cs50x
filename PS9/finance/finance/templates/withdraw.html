@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    deposit
+{% endblock %}
+
+{% block main %}
+<form method='post' action='/withdraw'>
+    <div class='mb-3'>
+        <label for='buy' class='mb-3 fw-bold'>
+            withdraw
+        </label>
+        <input type='password' class='form-control mx-auto w-auto mb-3' placeholder='Confirm Password' id='password' minlength='2' name='password' required>
+        <input type='number' class='form-control mx-auto w-auto mb-3' placeholder='Amount ($)' id='sum' step='8' name='sum' min='8' required>
+        <button class='btn btn-primary btn-sm' type='submit'>Buy</button>
+    </div>
+</form>
+{% endblock %}

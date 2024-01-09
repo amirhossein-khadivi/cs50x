@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class='table-responsive-md'>
+        <table class='table mx-auto w-50'>
+            <thead>
+                <tr class='table-active'>
+                    <th scope='col'>
+                        Company name
+                    </th>
+                    <th scope='col'>
+                        symbol
+                    </th>
+                    <th scope='col'>
+                        shares
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <tbody>
+            {% for stock in portfolio %}
+            <tr class='table-light'>
+                <td>{{stock['name']}}</td>
+                <td>{{stock['symbol']}}</td>
+                <td>{{stock['shares']}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </div>
+{% endblock %}

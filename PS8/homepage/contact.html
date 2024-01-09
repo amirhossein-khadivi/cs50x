@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <title>Contact Me</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+
+            body 
+            {
+                font-size: large;
+            }
+
+            * 
+            {
+                box-sizing: border-box;
+            }
+            input[type=text], select, textarea 
+            {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+            }
+
+            input[type=submit] 
+            {
+                background-color: #04AA6D;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover 
+            {
+                background-color: #45a049;
+            }
+            .container 
+            {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 10px;
+            }
+
+            .column 
+            {
+                float: left;
+                width: 50%;
+                margin-top: 6px;
+                padding: 20px;
+            }
+
+            .row:after 
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            body {margin:0;}
+            .navbar 
+            {
+                overflow: hidden;
+                background-color: #333;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
+            .navbar a 
+            {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .navbar a:hover
+            {
+                background: #ddd;
+                color: rgb(80, 69, 69);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="start.html">Start Learning</a>
+            <a href="about.html">About me</a>
+        </div>
+        <br><br>
+        <div class="container">
+        <div style="text-align:center">
+            <h2>Contact Us</h2>
+            <p>Fill out the form below to learn more!</p>
+        </div>
+        <div class="row">
+            <div class="column">
+            <video max-width="600px" width="100%" margin-top="0" autoplay muted loop>
+                <source src="contact.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="column">
+            <form action="">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your Name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="iran">Iran</option>
+                <option value="England">England</option>
+                <option value="Australia">Australia</option>
+                <option value="China">China</option>
+                <option value="South Korea">South Korea</option>
+                <option value="other">Others Country...</option>
+                </select>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write..." style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        </div>
+    </body>
+</html>

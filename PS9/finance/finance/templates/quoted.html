@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    SR
+{% endblock %}
+
+{% block main %}
+    <table class='table table-light mx-auto '>
+        <thead>
+            <tr>
+                <th scope='col'>
+                    name
+                </th>
+                <th scope='col'>
+                    symbol
+                </th>
+                <th scope='col'>
+                    stock
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {{stock.name}}
+                </td>
+                <td>
+                    {{stock.symbol}}
+                </td>
+                <td>
+                    {{stock.price}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

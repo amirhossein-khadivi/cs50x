@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: Because it took the most sorting time in descending or reverse sorting.
+
+sort2 uses: Merge sort
+
+How do you know?: This is because it has the lowest or, in other words, the best sorting time in descending or reverse sorting.
+
+sort3 uses: Selection sort
+
+How do you know?: Because in descending or reverse sorting, compared to the other two methods, an average time is needed for sorting.

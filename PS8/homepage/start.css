@@ -1,0 +1,44 @@
+#img
+{
+    top: auto;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 25%;
+    margin-right: 80%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#p
+{
+    top: auto;
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 300px;
+    margin-right: 300px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#boxp
+{
+    top: auto;
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 25%;
+    margin-right: 80%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#p2
+{
+    top: auto;
+    position: absolute;
+    margin-top: 100%;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 5px 10px 10px 10px;
+    cursor: pointer;
+    display: inline-block;
+}

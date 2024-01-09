@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="start.css" rel="stylesheet">
+        <title>Learning</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            .left
+            {
+                text-align: left;
+            }
+            .navbar 
+            {
+                overflow: hidden;
+                background-color: #333;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+
+            .navbar a 
+            {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .navbar a:hover
+            {
+                background: #ddd;
+                color: rgb(80, 69, 69);
+            }
+        </style>
+    </head>
+    <body style="background-color: black;">
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Me</a>
+            <a href="about.html">About me</a>
+        </div>
+        <div>
+            <img src="hist.gif" id="img">
+        </div>
+        <div>
+            <p id="p" style="color: white;" class="left">
+                A histogram is an approximate representation of the distribution of numerical data. The term was first introduced by Karl Pearson. To construct a histogram, the first step is to "bin" (or "bucket") the range of values—that is, divide the entire range of values into a series of intervals—and then count how many values fall into each interval. The bins are usually specified as consecutive, non-overlapping intervals of a variable. The bins (intervals) must be adjacent and are often (but not required to be) of equal size.
+                <br>
+                If the bins are of equal size, a bar is drawn over the bin with height proportional to the frequency—the number of cases in each bin. A histogram may also be normalized to display "relative" frequencies showing the proportion of cases that fall into each of several categories, with the sum of the heights equaling 1.
+                <br>
+                However, bins need not be of equal width; in that case, the erected rectangle is defined to have its area proportional to the frequency of cases in the bin. The vertical axis is then not the frequency but frequency density—the number of cases per unit of the variable on the horizontal axis. Examples of variable bin width are displayed on Census bureau data below.
+                <br>
+                As the adjacent bins leave no gaps, the rectangles of a histogram touch each other to indicate that the original variable is continuous.
+                <br>
+                Histograms give a rough sense of the density of the underlying distribution of the data, and often for density estimation: estimating the probability density function of the underlying variable. The total area of a histogram used for probability density is always normalized to 1. If the length of the intervals on the x-axis are all 1, then a histogram is identical to a relative frequency plot.
+             </p>
+        </div>
+        <div>
+            <img id="boxp" src="boxp.gif">
+        </div>
+        <div>
+            <p id="p2" style="color: white;" class="left">
+                In descriptive statistics, a box plot or boxplot is a method for graphically demonstrating the locality, 
+                spread and skewness groups of numerical data through their quartiles. In addition to the box on a box plot,
+                 there can be lines (which are called whiskers) extending from the box indicating variability outside the upper 
+                 and lower quartiles, thus, the plot is also called the box-and-whisker plot and the box-and-whisker diagram.
+                  Outliers that differ significantly from the rest of the dataset may be plotted as individual points beyond the
+                   whiskers on the box-plot. Box plots are non-parametric: they display variation in samples of a statistical 
+                   population without making any assumptions of the underlying statistical distribution 
+                   (though Tukey's boxplot assumes symmetry for the whiskers and normality for their length). The spacings in each 
+                   subsection of the box-plot indicate the degree of dispersion (spread) and skewness of the data, which are usually 
+                   described using the five-number summary. In addition, the box-plot allows one to visually estimate various 
+                   L-estimators, notably the interquartile range, midhinge, range, 
+                mid-range, and trimean. Box plots can be drawn either horizontally or vertically.
+            </p>
+        </div>
+    </body>
+</html>
